@@ -1,7 +1,8 @@
 class GamesController < ApplicationController
   # Add your GamesController code here
   def index
-    binding.pry
+    @games = Game.all
+    render json: @game
   end
 
   def create
