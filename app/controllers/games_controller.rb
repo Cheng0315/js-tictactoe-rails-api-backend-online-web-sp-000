@@ -1,7 +1,8 @@
 class GamesController < ApplicationController
   # Add your GamesController code here
   def index
-
+    @game = Game.find(params[:id])
+    render json: @game
   end
 
   def create
@@ -17,7 +18,8 @@ class GamesController < ApplicationController
   end
 
   def update
-
+    @game = Game.find(params[:id])
+    render json: @game
   end
 
   private
