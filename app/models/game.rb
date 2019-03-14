@@ -1,3 +1,3 @@
 class Game < ActiveRecord::Base
-  attr_accessor :state
+  serialize :state
 end
