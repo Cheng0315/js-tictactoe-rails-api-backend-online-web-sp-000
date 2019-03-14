@@ -1,8 +1,7 @@
 class GamesController < ApplicationController
   # Add your GamesController code here
   def index
-    @game = Game.find(params[:id])
-    render json: @game
+    binding.pry
   end
 
   def create
