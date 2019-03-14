@@ -5,8 +5,8 @@ class GamesController < ApplicationController
   end
 
   def create
-    params[:state] = params[:state].to_s
-    @game = Game.create(params[:state])
+    state = {state: params[:state].to_s}
+    @game = Game.create(state)
     binding.pry
     render json: @game, status: 201
   end
