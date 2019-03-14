@@ -3,7 +3,7 @@ class GamesController < ApplicationController
   def index
     @games = Game.all
     binding.pry
-    render json: @game
+    render json: @games
   end
 
   def create
