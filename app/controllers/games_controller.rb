@@ -5,7 +5,9 @@ class GamesController < ApplicationController
   end
 
   def create
-    @game = Game.create(game_params)
+    @game = Game.new
+    @game.state = params[:state]
+    @game.save
     render json: @game, status: 201
   end
 
