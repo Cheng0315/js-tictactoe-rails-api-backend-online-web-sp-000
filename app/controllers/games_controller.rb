@@ -12,7 +12,7 @@ class GamesController < ApplicationController
   end
 
   def show
-
+    binding.pry
   end
 
   def update
