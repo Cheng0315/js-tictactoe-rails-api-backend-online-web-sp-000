@@ -5,6 +5,7 @@ class GamesController < ApplicationController
   end
 
   def create
+    binding.pry
     @game = Game.create()
     render json: @game, status: 201
   end
